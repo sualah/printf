@@ -29,4 +29,15 @@ int print_S(va_list S);
 int print_r(va_list r);
 int print_R(va_list R);
 
+int print_f(va_list f);
+int print_e(va_list e);
+int print_g(va_list g);
+int print_l(va_list l);
+int print_0(va_list zero);
+int print_h(va_list h);
+int print_add(va_list add);
+int print_less(va_list less);
+int print_space(va_list space);
+int print_sharp(va_list sharp);
+
 #endif  /* _MAIN_H */
