@@ -40,17 +40,17 @@
 ## Advanced Tasks
 - [x] Handle conversion specifier ```b```.
 - [x] Handle conversion specifiers ```u```, ```o```, ```x```, ```X```.
-- [ ] Use a local buffer of 1024 chars in order to call write as little as possible.
+- [x] Use a local buffer of 1024 chars in order to call write as little as possible.
 - [x] Handle conversion specifier ```S```.
 - [x] Handle conversion specifier ```p```.
-- [ ] Handle flag characters ```+```, space, and ```#``` for non-custom conversion specifiers.
-- [ ] Handle length modifiers ```l``` and ```h``` for non-custom conversion specifiers.
-- [ ] Handle the field width for non-custom conversion specifiers.
-- [ ] Handle the precision for non-custom conversion specifiers.
-- [ ] Handle the ```0``` flag character for non-custom conversion specifiers.
+- [x] Handle flag characters ```+```, space, and ```#``` for non-custom conversion specifiers.
+- [x] Handle length modifiers ```l``` and ```h``` for non-custom conversion specifiers.
+- [x] Handle the field width for non-custom conversion specifiers.
+- [x] Handle the precision for non-custom conversion specifiers.
+- [x] Handle the ```0``` flag character for non-custom conversion specifiers.
 - [x] Handle the custom conversion specifier ```r``` that prints the reversed string.
 - [x] Handle the custom conversion specifier ```R``` that prints the rot13'ed string.
-- [ ] All above options should work well together.
+- [x] All above options should work well together.
 ## File Descriptions
 * **_printf.c:** - contains the  fucntion ```_printf```, which uses the prototype ```int _printf(const char *format, ...);```. The format string is composed of zero or more directives. See ```man 3 printf``` for more detail. **_printf** will return the number of characters printed (excluding the null byte used to end output to strings) and will write output to **stdout**, the standard output stream.
 * **_putchar.c:** - contains the function ```_putchar```, which writes a character to stdout.
