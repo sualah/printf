@@ -12,9 +12,6 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0;
-	int digits[10];
-        int num_digits = 0;
-	int i;
 
 	va_start(args, format);
 	while (*format != '\0')
@@ -33,34 +30,21 @@ int _printf(const char *format, ...)
 				}
 				case 's':
 				{
-					const char *s = va_arg(args, const char *);
-					while (*s != '\0')
-					{
-						_putchar(*s);
-						s++;
-						count++;
-					}
+					char *s = va_arg(args, char *);
+					count += _puts(s);
 					break;
 				}
 				case 'd':
 				case 'i':
 				{
 					int num = va_arg(args, int);
-					if (num < 0)
+					if ( num < 0)
 					{
+						num = -num;
 						_putchar('-');
 						count++;
-						num = -num;
 					}
-					do {
-						digits[num_digits++] = num % 10;
-						num /= 10;
-					} while (num > 0);
-					for (i = num_digits - 1; i >= 0; i--)
-					{
-						_putchar('0' + digits[i]);
-						count++;
-					}
+					count += _puts(convert(num, 10));	
 					break;
 				}
 				case '%':
