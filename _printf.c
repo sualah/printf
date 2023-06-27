@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 				case 'c':
 				{
 					int c = va_arg(args, int);
+
 					_putchar(c);
 					count++;
 					break;
@@ -31,6 +32,7 @@ int _printf(const char *format, ...)
 				case 's':
 				{
 					char *s = va_arg(args, char *);
+
 					count += _puts(s);
 					break;
 				}
@@ -38,13 +40,14 @@ int _printf(const char *format, ...)
 				case 'i':
 				{
 					int num = va_arg(args, int);
-					if ( num < 0)
+
+					if (num < 0)
 					{
 						num = -num;
 						_putchar('-');
 						count++;
 					}
-					count += _puts(convert(num, 10));	
+					count += _puts(convert(num, 10));
 					break;
 				}
 				case '%':

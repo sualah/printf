@@ -19,18 +19,17 @@ char *convert(unsigned int num, int base)
 
 
 	if (buffer == NULL)
-		return(NULL);
-	do
-	{
+		return (NULL);
+	do {
 		*ptr++ = Rep[num % base];
 		num /= base;
-	}
-	while (num != 0);
+	} while (num != 0);
 	*ptr = '\0';
 	len = strlen(buffer);
 	for (i = 0; i < len / 2; i++)
 	{
 		char temp = buffer[i];
+
 		buffer[i] = buffer[len - i - 1];
 		buffer[len - i - 1] = temp;
 	}
